@@ -1,5 +1,5 @@
 from typing import Optional
-import asyncio
+import time
 import requests
 import json
 import concurrent.futures
@@ -79,7 +79,7 @@ async def stream(request: Request, dealy: Optional[int] = 1):
                     "data": result
                 }
 
-                await asyncio.sleep(dealy)
+                time.sleep(dealy)
 
     return EventSourceResponse(generator())
 
