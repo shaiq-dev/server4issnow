@@ -52,6 +52,7 @@ app.add_middleware(
 @app.get('/api/pose')
 async def pose():
     pose = get_current_data_stamp()
+    print(pose)
     pose['above_water'] = is_iss_above_water(
         pose['latitude'], pose['longitude'])
     return JSONResponse(content=pose)
