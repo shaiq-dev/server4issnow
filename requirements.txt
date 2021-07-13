@@ -1,5 +1,5 @@
 fastapi==0.63.0
-requests==2.25.1
+requests==2.26.0
 sse-starlette==0.6.2
 starlette==0.14.2
 uuid==1.30
